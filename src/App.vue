@@ -10,20 +10,20 @@
 
       <div id="wind" style="display: inline-block; margin-left: 275px;"></div>
 
-      <div id="strip"><img src="/public/123.png" alt=""></div>
+      <div id="strip"><img src="./public/123.png" alt=""></div>
 
       <div class="day" style="margin-left: auto;margin-right: auto; width: 380px;">
 
         <div id="day1" style="max-width: 70px; text-align: center; display: inline-block;; padding-right: 20px;">
           <div id="number1"></div>
-          <img id="img1" src="/public/clear.png" />
+          <img id="img1" src="./public/clear.png" />
           <div id="degrees1"></div>
         </div>
 
         <div id="day2"
           style="max-width: 70px; text-align: center;display: inline-block;padding-left: 20px; padding-right: 20px;">
           <div id="number2"></div>
-          <img id="img2" src="/public/cloud30.png" />
+          <img id="img2" src="./public/cloud30.png" />
           <div id="degrees2"></div>
         </div>
 
@@ -31,7 +31,7 @@
         <div id="day3"
           style="max-width: 70px; text-align: center;display: inline-block;padding-left: 20px; padding-right: 20px;">
           <div id="number3"></div>
-          <img id="img3" src="/public/rain.png" />
+          <img id="img3" src="./public/rain.png" />
           <div id="degrees3"></div>
         </div>
 
@@ -39,7 +39,7 @@
         <div id="day4"
           style="max-width: 70px; text-align: center;display: inline-block;padding-left: 20px; padding-right: 20px;">
           <div id="number4"></div>
-          <img id="img4" src="/public/haze.png" />
+          <img id="img4" src="./public/haze.png" />
           <div id="degrees4"></div>
         </div>
 
@@ -47,7 +47,7 @@
         <div id="day5"
           style="max-width: 70px; text-align: center;display: inline-block;padding-left: 20px; padding-right: 20px;">
           <div id="number5"></div>
-          <img id="img5" src="/public/dust.png" />
+          <img id="img5" src="./public/dust.png" />
           <div id="degrees5"></div>
         </div>
 
@@ -69,7 +69,7 @@
 import axios from 'axios'
 let date = new Date()
 let day = date.getDate()
-let [clear, clouds, rain, haze, dust] = ["https://psv4.userapi.com/c909228/u291002761/docs/d11/c1a633ba25d2/clear.png?extra=1-xF3mZ88W7e0JXK53QSeLub0zd7tjx5W-SImVgE2YATW3ZkLNRjUuhItDU3d5IvkzemGVYfqhwIvWebhdgQ8SStlE4ON-L7CEUz1Cw159kAcouzHNmkSVxRkb7wQNHivyNtk6DmukgtyqAyNYfSNLiL6A", "https://psv4.userapi.com/c909228/u291002761/docs/d4/e8b929b0bb36/cloud30.png?extra=HGdg0OlQCK4TK-oiVqlsz_rr1CfUzjFD4XQ9SL8LB1PdeOI5jXHHLdDuZ8T41WRk3_OXmK8wfx5FHvTi1DR9ibmrkhFKmrL-n1r1LiMy1UKlUrCmCEDusKdXl0mLmmX_sO3hdfGGAiqyqzmMo0GN60S-0w", "/public/rain.png", "/public/haze.png", "/public/dust.png"]
+let [clear, clouds, rain, haze, dust] = ["https://psv4.userapi.com/c909228/u291002761/docs/d11/c1a633ba25d2/clear.png?extra=1-xF3mZ88W7e0JXK53QSeLub0zd7tjx5W-SImVgE2YATW3ZkLNRjUuhItDU3d5IvkzemGVYfqhwIvWebhdgQ8SStlE4ON-L7CEUz1Cw159kAcouzHNmkSVxRkb7wQNHivyNtk6DmukgtyqAyNYfSNLiL6A", "https://psv4.userapi.com/c909228/u291002761/docs/d4/e8b929b0bb36/cloud30.png?extra=HGdg0OlQCK4TK-oiVqlsz_rr1CfUzjFD4XQ9SL8LB1PdeOI5jXHHLdDuZ8T41WRk3_OXmK8wfx5FHvTi1DR9ibmrkhFKmrL-n1r1LiMy1UKlUrCmCEDusKdXl0mLmmX_sO3hdfGGAiqyqzmMo0GN60S-0w", "./public/rain.png", "./public/haze.png", "./public/dust.png"]
 window.onload = function ge() {
 
   axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=Kirov&units=metric&appid=dd942f90e8c353bb0a469a7db5bbb3d4`, {

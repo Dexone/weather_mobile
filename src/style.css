@@ -10,7 +10,7 @@
     border: 1ch;
     border-radius: 10px;
     font-size: 25px;
-    background-image: url(/public/moon.jpg);
+    background-image: url(./public/moon.jpg);
     background-position: center;
     font-family: 'Segoe UI';
     color: #fffcf4
