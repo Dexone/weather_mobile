@@ -1,0 +1,24 @@
+#box {
+    word-wrap: break-word;  /* перенос текста внутри блока */
+    max-width: 500px;
+    height: 896px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    padding-left: 20px;
+    border: 1ch;
+    border-radius: 10px;
+    font-size: 25px;
+    background-image: url(/public/moon.jpg);
+    background-position: center;
+    font-family: 'Segoe UI';
+    color: #fffcf4
+}
+
+/* input{
+    background: transparent;
+    border: none;
+    color: #fffcf4;
+    width: 50px;
+} */
